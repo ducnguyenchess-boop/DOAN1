@@ -1,0 +1,38 @@
+-sv
+-timescale 1ns/100ps
+# TESTBENCH FILES
+./../01_bench/driver.sv
+./../01_bench/scoreboard.sv
+./../01_bench/tbench.sv
+./../01_bench/tlib.svh
+# SOURCE CODE FILES
+./../00_src/full_adder.sv
+./../00_src/Add_Sub_32bit.sv
+./../00_src/SLL_SRL.sv
+./../00_src/SLT_SLTU_32bit.sv
+./../00_src/SRA.sv
+./../00_src/MUX4to1.sv
+./../00_src/Mux2to1.sv
+./../00_src/alu.sv
+./../00_src/multiplier_32bit.sv
+./../00_src/pcpi_mul.sv
+./../00_src/divider_32bit.sv
+./../00_src/pcpi_div.sv
+./../00_src/brc.sv
+./../00_src/regfile.sv
+./../00_src/Imm_gen.sv
+./../00_src/control_unit.sv
+./../00_src/forward_control.sv
+./../00_src/hazard_detection_load.sv
+./../00_src/bram_wrapper.sv        
+./../00_src/fetch_stage.sv
+./../00_src/stage_12.sv
+./../00_src/decode_stage.sv
+./../00_src/stage_23.sv
+./../00_src/execute_stage.sv
+./../00_src/stage_34.sv
+./../00_src/lsu.sv
+./../00_src/mem_stage.sv
+./../00_src/stage_45.sv
+./../00_src/wb_stage.sv
+./../00_src/pipelined.sv

@@ -1,0 +1,133 @@
+xrun(64): 20.09-s001: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	20.09-s001: Started on Dec 12, 2025 at 01:29:53 EST
+xrun
+	-access +rwc
+	-f ./flist.f
+		-sv
+		-timescale 1ns/100ps
+		./../01_bench/driver.sv
+		./../01_bench/scoreboard.sv
+		./../01_bench/tbench.sv
+		./../01_bench/tlib.svh
+		./../00_src/full_adder.sv
+		./../00_src/Add_Sub_32bit.sv
+		./../00_src/SLL_SRL.sv
+		./../00_src/SLT_SLTU_32bit.sv
+		./../00_src/SRA.sv
+		./../00_src/MUX4to1.sv
+		./../00_src/Mux2to1.sv
+		./../00_src/alu.sv
+		./../00_src/brc.sv
+		./../00_src/regfile.sv
+		./../00_src/Imm_gen.sv
+		./../00_src/control_unit.sv
+		./../00_src/forward_control.sv
+		./../00_src/hazard_detection_load.sv
+		./../00_src/bram_wrapper.sv
+		./../00_src/fetch_stage.sv
+		./../00_src/stage_12.sv
+		./../00_src/decode_stage.sv
+		./../00_src/stage_23.sv
+		./../00_src/execute_stage.sv
+		./../00_src/stage_34.sv
+		./../00_src/lsu.sv
+		./../00_src/mem_stage.sv
+		./../00_src/stage_45.sv
+		./../00_src/wb_stage.sv
+		./../00_src/pipelined.sv
+Recompiling... reason: file '../00_src/hazard_detection_load.sv' is newer than expected.
+	expected: Thu Dec 11 14:58:37 2025
+	actual:   Fri Dec 12 01:27:59 2025
+file: ./../00_src/hazard_detection_load.sv
+	module worklib.hazard_detection_load:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		$unit_0x4a7c13ec
+		tbench
+		MUX4to1
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.hazard_detection_load:sv <0x2d2873a3>
+			streams:   9, words:  3170
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                   Instances  Unique
+		Modules:                 327      29
+		Registers:               946     323
+		Scalar wires:           2513       -
+		Expanded wires:          192       6
+		Vectored wires:          347       -
+		Always blocks:            36      34
+		Initial blocks:            8       7
+		Cont. assignments:       699      92
+		Pseudo assignments:     1400     255
+		Compilation units:         1       1
+		Simulation timescale:  100ps
+	Writing initial simulation snapshot: worklib.tbench:sv
+Loading snapshot worklib.tbench:sv .................... Done
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /opt/cadence/XCELIUM2009/tools/xcelium/files/xmsimrc
+xcelium> run
+
+PIPELINE - ISA tests
+
+add......PASS
+addi.....PASS
+sub......PASS
+and......PASS
+andi.....PASS
+or.......PASS
+ori......PASS
+xor......PASS
+xori.....PASS
+slt......PASS
+slti.....PASS
+sltu.....PASS
+sltiu....PASS
+sll......PASS
+slli.....PASS
+srl......PASS
+srli.....PASS
+sra......PASS
+srai.....PASS
+lw.......PASS
+lh.......PASS
+lhu......PASS
+lb.......PASS
+lbu......PASS
+sw.......PASS
+sh.......PASS
+sb.......PASS
+auipc....PASS
+lui......PASS
+beq......PASS
+bne......PASS
+blt......PASS
+bltu.....PASS
+bge......PASS
+bgeu.....PASS
+jal......PASS
+jalr.....PASS
+malgn....ERROR
+iosw.....PASS
+
+=================== Result ===================
+Total Clock Cycles Executed = 7841
+Total Instructions Executed = 4831
+Total Branch Instructions   = 1604
+Total Branch Mispredictions = 1453
+
+----------------------------------------------
+Instruction Per Cycle (IPC) = 0.62
+Branch Misprediction Rate   = 90.59 %
+
+END of ISA tests
+
+Simulation complete via $finish(1) at time 31416 NS + 1
+../01_bench/scoreboard.sv:82         $finish;
+xcelium> exit
+TOOL:	xrun(64)	20.09-s001: Exiting on Dec 12, 2025 at 01:29:57 EST  (total: 00:00:04)
